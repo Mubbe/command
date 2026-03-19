@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://uuayigkayg2q"]
+
+[ext_resource type="Script" uid="uid://dqxwkbmx8csqg" path="res://Main.cs" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://stt6byd3tf5v" path="res://Ground.cs" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://de0mnn4ds46x6" path="res://Tale.cs" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://bt02gy7pw2ha4" path="res://UndoButton.cs" id="3_1bvp3"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_h2yge"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
+size = Vector3(20, 0, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7dm0k"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
+size = Vector3(2, 2, 2)
+
+[node name="Main" type="Node3D" unique_id=1759657194]
+script = ExtResource("1_ig7tw")
+
+[node name="ground" type="StaticBody3D" parent="." unique_id=372750440 node_paths=PackedStringArray("tale1", "tale2", "tale3", "tale4", "tale5", "tale6", "tale7", "tale8", "tale9")]
+script = ExtResource("2_1bvp3")
+tale1 = NodePath("../tales/tale")
+tale2 = NodePath("../tales/tale2")
+tale3 = NodePath("../tales/tale3")
+tale4 = NodePath("../tales/tale4")
+tale5 = NodePath("../tales/tale5")
+tale6 = NodePath("../tales/tale6")
+tale7 = NodePath("../tales/tale7")
+tale8 = NodePath("../tales/tale8")
+tale9 = NodePath("../tales/tale9")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=202410939]
+shape = SubResource("WorldBoundaryShape3D_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground" unique_id=1714830276]
+mesh = SubResource("BoxMesh_h2yge")
+
+[node name="tales" type="Node3D" parent="." unique_id=717229047]
+
+[node name="tale" type="StaticBody3D" parent="tales" unique_id=1610455319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale" unique_id=1079005399]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale" unique_id=1171637473]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale2" type="StaticBody3D" parent="tales" unique_id=982133736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale2" unique_id=2098017554]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale2" unique_id=1723417164]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale3" type="StaticBody3D" parent="tales" unique_id=1605206716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale3" unique_id=870239508]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale3" unique_id=1797197429]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale4" type="StaticBody3D" parent="tales" unique_id=1406133974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale4" unique_id=106555309]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale4" unique_id=490516357]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale5" type="StaticBody3D" parent="tales" unique_id=662535847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale5" unique_id=1917806461]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale5" unique_id=509493322]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale6" type="StaticBody3D" parent="tales" unique_id=680374671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale6" unique_id=2139594431]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale6" unique_id=1397032689]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale7" type="StaticBody3D" parent="tales" unique_id=870838493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale7" unique_id=342132771]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale7" unique_id=385790909]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale8" type="StaticBody3D" parent="tales" unique_id=1564014229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale8" unique_id=2135023965]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale8" unique_id=639891797]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="tale9" type="StaticBody3D" parent="tales" unique_id=1392354445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5400548, 3.2197928, -2.8839374)
+script = ExtResource("2_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tales/tale9" unique_id=612923315]
+mesh = SubResource("BoxMesh_7dm0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tales/tale9" unique_id=1405887423]
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=27826261]
+
+[node name="UndoButton" type="Button" parent="CanvasLayer" unique_id=661982666]
+offset_right = 23.0
+offset_bottom = 8.0
+text = "Undo"
+script = ExtResource("3_1bvp3")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1270465863]
+transform = Transform3D(1, 0, 0, 0, 0.84826076, 0.52957875, 0, -0.52957875, 0.84826076, 0, 9.543119, 14.064972)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1983735885]
+transform = Transform3D(1, 0, 0, 0, -0.50000006, 0.8660254, 0, -0.8660254, -0.50000006, 0, 36, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=301572304]
